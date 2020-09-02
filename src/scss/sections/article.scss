@@ -65,4 +65,19 @@
             @extend %image;
         }
     }
+
+    &__chart-wrapper {
+        @extend %absolute;
+
+        background: $gray-light;
+        position: sticky;
+        bottom: unset;
+        top: $xxl;
+
+        height: 500px;
+    }
+
+    &__chart-space {
+        height: 1000px;
+    }
 }
