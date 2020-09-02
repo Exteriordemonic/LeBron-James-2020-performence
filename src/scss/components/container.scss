@@ -1,0 +1,15 @@
+$max-width: $gutter * 172;
+$max-width-small: $gutter * 100;
+$padding: $l;
+
+.container {
+    max-width: $max-width + 2 * $padding;
+    padding: 0 $padding;
+    width: 100%;
+    margin: 0 auto;
+
+    &--small {
+        max-width: $max-width-small;
+        padding: 0;
+    }
+}

@@ -40,7 +40,8 @@
     "node": ">=10.13.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.8.6"
+    "autoprefixer": "^9.8.6",
+    "d3": "^6.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

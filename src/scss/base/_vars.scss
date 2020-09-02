@@ -8,7 +8,12 @@
 /* Grid setup */
 /* Colour palette */
 $black: #000;
+$light: #fff;
 $white: #fff;
+$special: #254384;
+$special2: #B92B35;
+$gray: #A8A8A8;
+$gray-light: #F2F2F2;
 
 $body-background-color: #333;
 $foreground-color: #fff;
@@ -17,3 +22,14 @@ $accent-color: #999;
 $link-color: #ec1f4e;
 
 /* Components */
+
+$gutter: 8px;
+
+$xs: $gutter * 0.5;
+$s: $gutter;
+$m: $gutter * 1.5;
+$l: $gutter * 4;
+$xl: $gutter * 8;
+$xxl: $gutter * 12;
+
+$transition: 0.4s;

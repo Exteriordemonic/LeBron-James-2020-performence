@@ -15,16 +15,23 @@
 
 // Media queries
 @mixin bp($point) {
-  @if $point == large {
-    @media (min-width: 1280px) { @content; }
-  } @else if $point == small {
-    @media (max-width: 1279px) { @content; }
+  @if $point==large {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $point==small {
+    @media (max-width: 1279px) {
+      @content;
+    }
   }
 }
 
 // Text selection
 @mixin text-selection($color-selection, $color-selection-bg) {
-  ::-moz-selection { // sass-lint:disable-line no-vendor-prefixes
+  ::-moz-selection {
+    // sass-lint:disable-line no-vendor-prefixes
     background: $color-selection-bg;
     color: $color-selection;
     text-shadow: none;
@@ -41,9 +48,65 @@
 //Usage:
 //@include placeholder;
 @mixin placeholder {
+
   // sass-lint:disable no-vendor-prefixes
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  :-moz-placeholder {
+    @content
+  }
+
+  ::-moz-placeholder {
+    @content
+  }
+
+  :-ms-input-placeholder {
+    @content
+  }
+}
+
+
+%image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-start {
+    justify-content: flex-start;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+}
+
+%position-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%absolute {
+  @extend %position-0;
+
+  position: absolute;
+}
+
+%pseudo {
+  @extend %absolute;
+
+  content: '';
+}
+
+%transition {
+  transition: $transition;
 }

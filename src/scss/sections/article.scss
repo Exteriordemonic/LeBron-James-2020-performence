@@ -1,0 +1,68 @@
+.article {
+    padding: $xxl 0;
+    font-size: 18px;
+
+    &__cats {
+        @extend %flex;
+        @extend %flex-start;
+
+        margin-bottom: $l;
+    }
+
+    &__cat-link {
+        @extend %transition;
+
+        color: $special;
+        font-weight: bold;
+        position: relative;
+
+        &::before {
+            @extend %pseudo;
+            @extend %transition;
+
+            top: unset;
+            bottom: $gutter * 0.2;
+            width: 100%;
+            height: $s;
+            background-color: rgba($special, 0.2);
+        }
+
+        &:hover {
+            color: $special2;
+
+            &::before {
+                background-color: rgba($special2, 0.2);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: $l;
+    }
+
+    &__text {
+        margin-bottom: $l;
+
+        line-height: 1.8;
+
+        &--small {
+            max-width: $gutter * 60;
+        }
+    }
+
+    &__subtitle {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: $l;
+    }
+
+    &__image {
+        margin-bottom: $l;
+
+        img {
+            @extend %image;
+        }
+    }
+}

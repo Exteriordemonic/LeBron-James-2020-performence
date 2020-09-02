@@ -1,0 +1,22 @@
+.y-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: $special;
+}
+
+.y-line {
+    stroke-width: $xs /2;
+    stroke: rgba($special, 0.2);
+}
+
+.y-axis {
+    opacity: 0;
+}
+
+#chart {
+    svg {
+        &:last-child {
+            display: none;
+        }
+    }
+}

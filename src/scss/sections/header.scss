@@ -1,0 +1,13 @@
+.header {
+    padding: $s 0;
+    background: $light;
+
+    &__logo {
+        width: $xxl;
+        display: block;
+
+        img {
+            @extend %image;
+        }
+    }
+}
